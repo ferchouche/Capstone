@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:tool="http://www.eclipse.org/sirius/diagram/description/tool/1.1.0" xmlns:tool_1="http://www.eclipse.org/sirius/description/tool/1.1.0" name="dsl" version="11.1.1.201610211630">
+  <ownedViewpoints name="Path">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="EvolutionStyle_Rep" domainClass="MetaModel.EvolutionStyle" enablePopupBars="true">
+      <defaultLayer name="EvolutionLayer">
+        <nodeMappings name="IntermediateState" domainClass="MetaModel.IntermidiateState">
+          <style xsi:type="style:SquareDescription" sizeComputationExpression="7" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='blue']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="InitialState" domainClass="MetaModel.InitialState">
+          <style xsi:type="style:SquareDescription" sizeComputationExpression="7" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='orange']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="FinalState" domainClass="MetaModel.FinalState">
+          <style xsi:type="style:SquareDescription" sizeComputationExpression="7" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_green']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="State" domainClass="MetaModel.State"/>
+        <edgeMappings name="InitToInter" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='InitialState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetFinderExpression="feature:next">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="InterToInter" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetFinderExpression="feature:next">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="InterToFinal" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='FinalState']" targetFinderExpression="feature:next">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <toolSections name="New State">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="IntermediateState" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.IntermidiateState" referenceName="states">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="new IntermediateState"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="FinalState" nodeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='FinalState']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.FinalState" referenceName="states">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="new FinalState"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="InitialState" nodeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='InitialState']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.InitialState" referenceName="states">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="InitialState"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="New InitTransition">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InitToInter" edgeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InitToInter']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="New InterTransition">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InterToInter" edgeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InterToInter']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="New FinalTransition">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InterToFianl" edgeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InterToFinal']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="var:target"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+      </defaultLayer>
+    </ownedRepresentations>
+  </ownedViewpoints>
+</description:Group>

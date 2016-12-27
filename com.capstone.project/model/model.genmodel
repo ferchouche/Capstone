@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.capstone.project/src" modelPluginID="com.capstone.project"
+    modelName="Model" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>MetaModel.ecore</foreignModel>
+  <genPackages prefix="MetaModel" disposableProviderFactory="true" ecorePackage="MetaModel.ecore#/">
+    <genClasses ecoreClass="MetaModel.ecore#//EvolutionStyle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//EvolutionStyle/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/FinalArchitecture"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/states"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/transitions"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/InitialArchitecture"/>
+    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//Transition/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//Transition/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//Transition/operations"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//Transition/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//Transition/target"/>
+    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//Operation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//Operation/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//Operation/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//Operation/time"/>
+    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//State">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//State/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//State/next"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//State/prev"/>
+    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//InitialState"/>
+    <genClasses ecoreClass="MetaModel.ecore#//IntermidiateState"/>
+    <genClasses ecoreClass="MetaModel.ecore#//FinalState"/>
+  </genPackages>
+</genmodel:GenModel>
