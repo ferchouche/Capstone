@@ -1,20 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.projet.sirius:EvolutionStyle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.projet.sirius="com.projet.sirius" name="new IntermediateState">
   <states xsi:type="com.projet.sirius:InitialState" name="Nantes" next="//@states.2 //@states.3"/>
-  <states xsi:type="com.projet.sirius:FinalState" name="Paris" prev="//@states.2 //@states.3"/>
-  <states xsi:type="com.projet.sirius:IntermidiateState" name="Rennes" next="//@states.1" prev="//@states.0"/>
-  <states xsi:type="com.projet.sirius:IntermidiateState" name="Tours" next="//@states.0 //@states.1" prev="//@states.1"/>
-  <states xsi:type="com.projet.sirius:IntermidiateState" name="new IntermediateState" next="//@states.1" prev="//@states.2"/>
+  <states xsi:type="com.projet.sirius:FinalState" name="Paris" prev="//@states.2 //@states.3 //@states.5"/>
+  <states xsi:type="com.projet.sirius:IntermidiateState" name="Rennes" next="//@states.1 //@states.5" prev="//@states.0 //@states.4"/>
+  <states xsi:type="com.projet.sirius:IntermidiateState" name="Tours" next="//@states.1 //@states.4" prev="//@states.0"/>
+  <states xsi:type="com.projet.sirius:IntermidiateState" name="Brest" next="//@states.2" prev="//@states.3"/>
+  <states xsi:type="com.projet.sirius:IntermidiateState" name="Lyon" next="//@states.1" prev="//@states.2"/>
   <transitions name="NantesRennes" description="" source="//@states.0" target="//@states.2">
-    <operations name="One"/>
+    <operations name="One" cost="100.0" time="5.0"/>
   </transitions>
   <transitions name="RennesParis" source="//@states.2" target="//@states.1">
-    <operations name="Two"/>
+    <operations name="Two" cost="50.0" time="30.0"/>
   </transitions>
   <transitions name="NantesTours" source="//@states.0" target="//@states.3">
-    <operations name="Three"/>
+    <operations name="Three" cost="70.0" time="70.0"/>
   </transitions>
   <transitions name="ToursParis" source="//@states.3" target="//@states.1">
-    <operations name="Four"/>
+    <operations name="Four" cost="5.0" time="60.0"/>
+  </transitions>
+  <transitions name="ToursBrest" source="//@states.3" target="//@states.4">
+    <operations name="Fifth" cost="2.0" time="4.0"/>
+  </transitions>
+  <transitions name="BrestRennes" source="//@states.4" target="//@states.2">
+    <operations name="Six" cost="5.0" time="35.0"/>
   </transitions>
 </com.projet.sirius:EvolutionStyle>
