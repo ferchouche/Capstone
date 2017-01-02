@@ -198,7 +198,7 @@ public class StateItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ModelEditPlugin.INSTANCE;
+		return MetaModelEditPlugin.INSTANCE;
 	}
 
 }

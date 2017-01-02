@@ -263,7 +263,7 @@ public class TransitionItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ModelEditPlugin.INSTANCE;
+		return MetaModelEditPlugin.INSTANCE;
 	}
 
 }

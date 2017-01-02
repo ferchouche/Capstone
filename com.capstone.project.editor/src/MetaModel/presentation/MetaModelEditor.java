@@ -530,7 +530,7 @@ public class MetaModelEditor
 					}
 				}
 				catch (CoreException exception) {
-					ModelEditorPlugin.INSTANCE.log(exception);
+					MetaModelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 		};
@@ -646,7 +646,7 @@ public class MetaModelEditor
 					showTabs();
 				}
 				catch (PartInitException exception) {
-					ModelEditorPlugin.INSTANCE.log(exception);
+					MetaModelEditorPlugin.INSTANCE.log(exception);
 				}
 			}
 
@@ -657,7 +657,7 @@ public class MetaModelEditor
 						markerHelper.createMarkers(diagnostic);
 					}
 					catch (CoreException exception) {
-						ModelEditorPlugin.INSTANCE.log(exception);
+						MetaModelEditorPlugin.INSTANCE.log(exception);
 					}
 				}
 			}
@@ -1523,7 +1523,7 @@ public class MetaModelEditor
 		catch (Exception exception) {
 			// Something went wrong that shouldn't.
 			//
-			ModelEditorPlugin.INSTANCE.log(exception);
+			MetaModelEditorPlugin.INSTANCE.log(exception);
 		}
 		updateProblemIndication = true;
 		updateProblemIndication();
@@ -1727,7 +1727,7 @@ public class MetaModelEditor
 	 * @generated
 	 */
 	private static String getString(String key) {
-		return ModelEditorPlugin.INSTANCE.getString(key);
+		return MetaModelEditorPlugin.INSTANCE.getString(key);
 	}
 
 	/**
@@ -1737,7 +1737,7 @@ public class MetaModelEditor
 	 * @generated
 	 */
 	private static String getString(String key, Object s1) {
-		return ModelEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
+		return MetaModelEditorPlugin.INSTANCE.getString(key, new Object [] { s1 });
 	}
 
 	/**

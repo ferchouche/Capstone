@@ -76,7 +76,7 @@ public interface MetaModelPackage extends EPackage {
 	int EVOLUTION_STYLE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Final Architecture</b></em>' reference.
+	 * The feature id for the '<em><b>Final Architecture</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -85,31 +85,31 @@ public interface MetaModelPackage extends EPackage {
 	int EVOLUTION_STYLE__FINAL_ARCHITECTURE = 1;
 
 	/**
-	 * The feature id for the '<em><b>States</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int EVOLUTION_STYLE__STATES = 2;
-
-	/**
 	 * The feature id for the '<em><b>Transitions</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVOLUTION_STYLE__TRANSITIONS = 3;
+	int EVOLUTION_STYLE__TRANSITIONS = 2;
 
 	/**
-	 * The feature id for the '<em><b>Initial Architecture</b></em>' reference.
+	 * The feature id for the '<em><b>Initial Architecture</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int EVOLUTION_STYLE__INITIAL_ARCHITECTURE = 4;
+	int EVOLUTION_STYLE__INITIAL_ARCHITECTURE = 3;
+
+	/**
+	 * The feature id for the '<em><b>States</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int EVOLUTION_STYLE__STATES = 4;
 
 	/**
 	 * The number of structural features of the '<em>Evolution Style</em>' class.
@@ -500,26 +500,15 @@ public interface MetaModelPackage extends EPackage {
 	EAttribute getEvolutionStyle_Name();
 
 	/**
-	 * Returns the meta object for the reference '{@link MetaModel.EvolutionStyle#getFinalArchitecture <em>Final Architecture</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetaModel.EvolutionStyle#getFinalArchitecture <em>Final Architecture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Final Architecture</em>'.
+	 * @return the meta object for the containment reference '<em>Final Architecture</em>'.
 	 * @see MetaModel.EvolutionStyle#getFinalArchitecture()
 	 * @see #getEvolutionStyle()
 	 * @generated
 	 */
 	EReference getEvolutionStyle_FinalArchitecture();
-
-	/**
-	 * Returns the meta object for the containment reference list '{@link MetaModel.EvolutionStyle#getStates <em>States</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>States</em>'.
-	 * @see MetaModel.EvolutionStyle#getStates()
-	 * @see #getEvolutionStyle()
-	 * @generated
-	 */
-	EReference getEvolutionStyle_States();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link MetaModel.EvolutionStyle#getTransitions <em>Transitions</em>}'.
@@ -533,15 +522,26 @@ public interface MetaModelPackage extends EPackage {
 	EReference getEvolutionStyle_Transitions();
 
 	/**
-	 * Returns the meta object for the reference '{@link MetaModel.EvolutionStyle#getInitialArchitecture <em>Initial Architecture</em>}'.
+	 * Returns the meta object for the containment reference '{@link MetaModel.EvolutionStyle#getInitialArchitecture <em>Initial Architecture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Initial Architecture</em>'.
+	 * @return the meta object for the containment reference '<em>Initial Architecture</em>'.
 	 * @see MetaModel.EvolutionStyle#getInitialArchitecture()
 	 * @see #getEvolutionStyle()
 	 * @generated
 	 */
 	EReference getEvolutionStyle_InitialArchitecture();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link MetaModel.EvolutionStyle#getStates <em>States</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>States</em>'.
+	 * @see MetaModel.EvolutionStyle#getStates()
+	 * @see #getEvolutionStyle()
+	 * @generated
+	 */
+	EReference getEvolutionStyle_States();
 
 	/**
 	 * Returns the meta object for class '{@link MetaModel.Transition <em>Transition</em>}'.
@@ -766,20 +766,12 @@ public interface MetaModelPackage extends EPackage {
 		EAttribute EVOLUTION_STYLE__NAME = eINSTANCE.getEvolutionStyle_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Final Architecture</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Final Architecture</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference EVOLUTION_STYLE__FINAL_ARCHITECTURE = eINSTANCE.getEvolutionStyle_FinalArchitecture();
-
-		/**
-		 * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference EVOLUTION_STYLE__STATES = eINSTANCE.getEvolutionStyle_States();
 
 		/**
 		 * The meta object literal for the '<em><b>Transitions</b></em>' containment reference list feature.
@@ -790,12 +782,20 @@ public interface MetaModelPackage extends EPackage {
 		EReference EVOLUTION_STYLE__TRANSITIONS = eINSTANCE.getEvolutionStyle_Transitions();
 
 		/**
-		 * The meta object literal for the '<em><b>Initial Architecture</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Initial Architecture</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
 		EReference EVOLUTION_STYLE__INITIAL_ARCHITECTURE = eINSTANCE.getEvolutionStyle_InitialArchitecture();
+
+		/**
+		 * The meta object literal for the '<em><b>States</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference EVOLUTION_STYLE__STATES = eINSTANCE.getEvolutionStyle_States();
 
 		/**
 		 * The meta object literal for the '{@link MetaModel.impl.TransitionImpl <em>Transition</em>}' class.

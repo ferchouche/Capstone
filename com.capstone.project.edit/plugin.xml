@@ -7,7 +7,7 @@
 <plugin>
 
    <extension point="org.eclipse.emf.edit.itemProviderAdapterFactories">
-      <!-- @generated model -->
+      <!-- @generated MetaModel -->
       <factory
             uri="com.projet.sirius"
             class="MetaModel.provider.MetaModelItemProviderAdapterFactory"

@@ -200,7 +200,7 @@ public class OperationItemProvider
 	 */
 	@Override
 	public ResourceLocator getResourceLocator() {
-		return ModelEditPlugin.INSTANCE;
+		return MetaModelEditPlugin.INSTANCE;
 	}
 
 }

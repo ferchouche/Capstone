@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.projet.sirius:EvolutionStyle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.projet.sirius="com.projet.sirius">
+  <FinalArchitecture name="Paris" prev="//@states.0 //@states.1"/>
+  <transitions name="One" source="//@InitialArchitecture" target="//@states.0">
+    <operations name="One" cost="5.0" time="10.0"/>
+  </transitions>
+  <transitions name="Two" source="//@InitialArchitecture" target="//@states.1">
+    <operations name="Two" cost="5.0" time="10.0"/>
+  </transitions>
+  <transitions name="Three" source="//@states.0" target="//@FinalArchitecture">
+    <operations name="Three" cost="5.0" time="10.0"/>
+  </transitions>
+  <transitions name="Four" source="//@states.1" target="//@FinalArchitecture">
+    <operations name="Four" cost="5.0" time="10.0"/>
+  </transitions>
+  <InitialArchitecture name="Nantes" next="//@states.0 //@states.1"/>
+  <states name="Rennes" next="//@FinalArchitecture" prev="//@InitialArchitecture"/>
+  <states name="Tours" next="//@FinalArchitecture" prev="//@InitialArchitecture"/>
+</com.projet.sirius:EvolutionStyle>

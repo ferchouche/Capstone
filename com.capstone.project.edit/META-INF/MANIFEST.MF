@@ -4,7 +4,7 @@ Bundle-Name: %pluginName
 Bundle-SymbolicName: com.capstone.project.edit;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: MetaModel.provider.ModelEditPlugin$Implementation
+Bundle-Activator: MetaModel.provider.MetaModelEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8

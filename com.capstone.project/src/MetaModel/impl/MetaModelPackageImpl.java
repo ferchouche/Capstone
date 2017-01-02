@@ -168,7 +168,7 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEvolutionStyle_States() {
+	public EReference getEvolutionStyle_Transitions() {
 		return (EReference)evolutionStyleEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -177,7 +177,7 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEvolutionStyle_Transitions() {
+	public EReference getEvolutionStyle_InitialArchitecture() {
 		return (EReference)evolutionStyleEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -186,7 +186,7 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getEvolutionStyle_InitialArchitecture() {
+	public EReference getEvolutionStyle_States() {
 		return (EReference)evolutionStyleEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -374,9 +374,9 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 		evolutionStyleEClass = createEClass(EVOLUTION_STYLE);
 		createEAttribute(evolutionStyleEClass, EVOLUTION_STYLE__NAME);
 		createEReference(evolutionStyleEClass, EVOLUTION_STYLE__FINAL_ARCHITECTURE);
-		createEReference(evolutionStyleEClass, EVOLUTION_STYLE__STATES);
 		createEReference(evolutionStyleEClass, EVOLUTION_STYLE__TRANSITIONS);
 		createEReference(evolutionStyleEClass, EVOLUTION_STYLE__INITIAL_ARCHITECTURE);
+		createEReference(evolutionStyleEClass, EVOLUTION_STYLE__STATES);
 
 		transitionEClass = createEClass(TRANSITION);
 		createEAttribute(transitionEClass, TRANSITION__NAME);
@@ -437,10 +437,10 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 		// Initialize classes, features, and operations; add parameters
 		initEClass(evolutionStyleEClass, EvolutionStyle.class, "EvolutionStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEvolutionStyle_Name(), ecorePackage.getEString(), "name", null, 0, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEvolutionStyle_FinalArchitecture(), this.getFinalState(), null, "FinalArchitecture", null, 1, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEvolutionStyle_States(), this.getState(), null, "states", null, 1, -1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEvolutionStyle_FinalArchitecture(), this.getFinalState(), null, "FinalArchitecture", null, 1, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvolutionStyle_Transitions(), this.getTransition(), null, "transitions", null, 1, -1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEvolutionStyle_InitialArchitecture(), this.getInitialState(), null, "InitialArchitecture", null, 1, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEvolutionStyle_InitialArchitecture(), this.getInitialState(), null, "InitialArchitecture", null, 1, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEvolutionStyle_States(), this.getIntermidiateState(), null, "states", null, 1, -1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(transitionEClass, Transition.class, "Transition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTransition_Name(), ecorePackage.getEString(), "name", null, 0, 1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
