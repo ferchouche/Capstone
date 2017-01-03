@@ -12,6 +12,10 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']"/>
         <target xmi:type="com.projet.sirius:Transition" href="EvolutionArchi.metamodel#//@transitions.3"/>
       </ownedRepresentationDescriptors>
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" xmi:id="_n5hVcNFIEeacEpTT7Fn_8A" name="Operations" representation="_n5hVcdFIEeacEpTT7Fn_8A">
+        <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']"/>
+        <target xmi:type="com.projet.sirius:Transition" href="EvolutionArchi.metamodel#//@transitions.2"/>
+      </ownedRepresentationDescriptors>
     </ownedViews>
   </viewpoint:DAnalysis>
   <diagram:DSemanticDiagram xmi:id="_peU7odE-EeavYfFJsAFh4w" name="EvolutionStyle">
@@ -29,7 +33,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96e9E-EeavYfFJsAFh4w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pfOTgdE-EeavYfFJsAFh4w" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pfOTgtE-EeavYfFJsAFh4w" x="250" y="130" width="70" height="70"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pfOTgtE-EeavYfFJsAFh4w" x="250" y="190" width="70" height="70"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pf0JYNE-EeavYfFJsAFh4w" type="2001" element="_peU7ptE-EeavYfFJsAFh4w">
           <children xmi:type="notation:Node" xmi:id="_pf0JY9E-EeavYfFJsAFh4w" type="5002">
@@ -40,7 +44,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96ftE-EeavYfFJsAFh4w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pf0JYdE-EeavYfFJsAFh4w" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf0JYtE-EeavYfFJsAFh4w" x="410" y="130" width="70" height="70"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf0JYtE-EeavYfFJsAFh4w" x="410" y="190" width="70" height="70"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pf0JZdE-EeavYfFJsAFh4w" type="2001" element="_peU7qNE-EeavYfFJsAFh4w">
           <children xmi:type="notation:Node" xmi:id="_pf0JaNE-EeavYfFJsAFh4w" type="5002">
@@ -51,7 +55,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pgISctE-EeavYfFJsAFh4w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pf0JZtE-EeavYfFJsAFh4w" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf0JZ9E-EeavYfFJsAFh4w" x="345" y="260" width="70" height="70"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf0JZ9E-EeavYfFJsAFh4w" x="345" y="320" width="70" height="70"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pf96YNE-EeavYfFJsAFh4w" type="2001" element="_peU7qtE-EeavYfFJsAFh4w">
           <children xmi:type="notation:Node" xmi:id="_pf96Y9E-EeavYfFJsAFh4w" type="5002">
@@ -62,35 +66,53 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pgI5gtE-EeavYfFJsAFh4w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pf96YdE-EeavYfFJsAFh4w" fontName="Segoe UI" fontHeight="8"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96YtE-EeavYfFJsAFh4w" x="345" width="70" height="70"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96YtE-EeavYfFJsAFh4w" x="345" y="60" width="70" height="70"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pf96ZdE-EeavYfFJsAFh4w" type="2001" element="_peU7rNE-EeavYfFJsAFh4w">
           <children xmi:type="notation:Node" xmi:id="_pf96aNE-EeavYfFJsAFh4w" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_pf96adE-EeavYfFJsAFh4w" y="5"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pf96ZtE-EeavYfFJsAFh4w" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96Z9E-EeavYfFJsAFh4w" width="10" height="20"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96Z9E-EeavYfFJsAFh4w" y="60" width="10" height="20"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pf96atE-EeavYfFJsAFh4w" type="2001" element="_peU7rdE-EeavYfFJsAFh4w">
           <children xmi:type="notation:Node" xmi:id="_pf96bdE-EeavYfFJsAFh4w" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_pf96btE-EeavYfFJsAFh4w" y="5"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pf96a9E-EeavYfFJsAFh4w" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96bNE-EeavYfFJsAFh4w" x="70" width="10" height="20"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96bNE-EeavYfFJsAFh4w" x="70" y="60" width="10" height="20"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pf96b9E-EeavYfFJsAFh4w" type="2001" element="_peU7rtE-EeavYfFJsAFh4w">
           <children xmi:type="notation:Node" xmi:id="_pf96ctE-EeavYfFJsAFh4w" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_pf96c9E-EeavYfFJsAFh4w" y="5"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pf96cNE-EeavYfFJsAFh4w" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96cdE-EeavYfFJsAFh4w" x="140" width="10" height="20"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96cdE-EeavYfFJsAFh4w" x="140" y="60" width="10" height="20"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_pf96dNE-EeavYfFJsAFh4w" type="2001" element="_peU7r9E-EeavYfFJsAFh4w">
           <children xmi:type="notation:Node" xmi:id="_pf96d9E-EeavYfFJsAFh4w" type="5002">
             <layoutConstraint xmi:type="notation:Location" xmi:id="_pf96eNE-EeavYfFJsAFh4w" y="5"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_pf96ddE-EeavYfFJsAFh4w" fontName="Segoe UI"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96dtE-EeavYfFJsAFh4w" x="210" width="10" height="20"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_pf96dtE-EeavYfFJsAFh4w" x="210" y="60" width="10" height="20"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_BS1qUNGaEea1oIoI-iNOsA" type="2001" element="_BSr5UNGaEea1oIoI-iNOsA">
+          <children xmi:type="notation:Node" xmi:id="_BS1qU9GaEea1oIoI-iNOsA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_BS1qVNGaEea1oIoI-iNOsA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_BS1qWtGaEea1oIoI-iNOsA" type="3003" element="_BSr5UdGaEea1oIoI-iNOsA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_BS1qW9GaEea1oIoI-iNOsA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BS1qXNGaEea1oIoI-iNOsA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_BS1qUdGaEea1oIoI-iNOsA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BS1qUtGaEea1oIoI-iNOsA" x="635" y="170" width="70" height="70"/>
+        </children>
+        <children xmi:type="notation:Node" xmi:id="_BS1qVdGaEea1oIoI-iNOsA" type="2001" element="_BSr5UtGaEea1oIoI-iNOsA">
+          <children xmi:type="notation:Node" xmi:id="_BS1qWNGaEea1oIoI-iNOsA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_BS1qWdGaEea1oIoI-iNOsA" y="5"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_BS1qVtGaEea1oIoI-iNOsA" fontName="Segoe UI"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_BS1qV9GaEea1oIoI-iNOsA" x="665" y="200" width="20" height="20"/>
         </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_pe7YktE-EeavYfFJsAFh4w"/>
         <edges xmi:type="notation:Edge" xmi:id="_pge3wNE-EeavYfFJsAFh4w" type="4001" element="_peU7sNE-EeavYfFJsAFh4w" source="_pf0JZdE-EeavYfFJsAFh4w" target="_pfOTgNE-EeavYfFJsAFh4w">
@@ -162,6 +184,9 @@
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_peU7pNE-EeavYfFJsAFh4w" name="Rennes" outgoingEdges="_peU7ttE-EeavYfFJsAFh4w" incomingEdges="_peU7sNE-EeavYfFJsAFh4w" width="7" height="7" resizeKind="NSEW">
       <target xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.0"/>
       <semanticElements xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" xmi:id="_peU7pdE-EeavYfFJsAFh4w" labelPosition="node" color="114,159,207">
         <description xmi:type="style:SquareDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']/@style"/>
       </ownedStyle>
@@ -170,7 +195,18 @@
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_peU7ptE-EeavYfFJsAFh4w" name="Tours" outgoingEdges="_peU7udE-EeavYfFJsAFh4w" incomingEdges="_peU7s9E-EeavYfFJsAFh4w" width="7" height="7" resizeKind="NSEW">
       <target xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.1"/>
       <semanticElements xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" xmi:id="_peU7p9E-EeavYfFJsAFh4w" labelPosition="node" color="114,159,207">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BSr5UNGaEea1oIoI-iNOsA" name="new IntermediateState" width="7" height="7" resizeKind="NSEW">
+      <target xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.2"/>
+      <semanticElements xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.2"/>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_BSr5UdGaEea1oIoI-iNOsA" labelPosition="node" color="114,159,207">
         <description xmi:type="style:SquareDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']"/>
@@ -178,6 +214,9 @@
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_peU7qNE-EeavYfFJsAFh4w" name="Nantes" outgoingEdges="_peU7sNE-EeavYfFJsAFh4w _peU7s9E-EeavYfFJsAFh4w" width="7" height="7" resizeKind="NSEW">
       <target xmi:type="com.projet.sirius:InitialState" href="EvolutionArchi.metamodel#//@InitialArchitecture"/>
       <semanticElements xmi:type="com.projet.sirius:InitialState" href="EvolutionArchi.metamodel#//@InitialArchitecture"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" xmi:id="_peU7qdE-EeavYfFJsAFh4w" labelPosition="node" color="252,175,62">
         <description xmi:type="style:SquareDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='InitialState']/@style"/>
       </ownedStyle>
@@ -186,6 +225,9 @@
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_peU7qtE-EeavYfFJsAFh4w" name="Paris" incomingEdges="_peU7ttE-EeavYfFJsAFh4w _peU7udE-EeavYfFJsAFh4w" width="7" height="7" resizeKind="NSEW">
       <target xmi:type="com.projet.sirius:FinalState" href="EvolutionArchi.metamodel#//@FinalArchitecture"/>
       <semanticElements xmi:type="com.projet.sirius:FinalState" href="EvolutionArchi.metamodel#//@FinalArchitecture"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" xmi:id="_peU7q9E-EeavYfFJsAFh4w" labelPosition="node" color="77,137,20">
         <description xmi:type="style:SquareDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='FinalState']/@style"/>
       </ownedStyle>
@@ -194,21 +236,38 @@
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_peU7rNE-EeavYfFJsAFh4w">
       <target xmi:type="com.projet.sirius:FinalState" href="EvolutionArchi.metamodel#//@FinalArchitecture"/>
       <semanticElements xmi:type="com.projet.sirius:FinalState" href="EvolutionArchi.metamodel#//@FinalArchitecture"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='State']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_peU7rdE-EeavYfFJsAFh4w">
       <target xmi:type="com.projet.sirius:InitialState" href="EvolutionArchi.metamodel#//@InitialArchitecture"/>
       <semanticElements xmi:type="com.projet.sirius:InitialState" href="EvolutionArchi.metamodel#//@InitialArchitecture"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='State']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_peU7rtE-EeavYfFJsAFh4w">
       <target xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.0"/>
       <semanticElements xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='State']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_peU7r9E-EeavYfFJsAFh4w">
       <target xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.1"/>
       <semanticElements xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='State']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_BSr5UtGaEea1oIoI-iNOsA">
+      <target xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.2"/>
+      <semanticElements xmi:type="com.projet.sirius:IntermidiateState" href="EvolutionArchi.metamodel#//@states.2"/>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='State']"/>
     </ownedDiagramElements>
     <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_peU7sNE-EeavYfFJsAFh4w" sourceNode="_peU7qNE-EeavYfFJsAFh4w" targetNode="_peU7pNE-EeavYfFJsAFh4w">
@@ -269,6 +328,17 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_qqIne9E-EeavYfFJsAFh4w" fontName="Segoe UI" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qqInfNE-EeavYfFJsAFh4w" width="70" height="70"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_EQY6MNGSEeaX7oWy8yayuA" type="2001" element="_EQF_QNGSEeaX7oWy8yayuA">
+          <children xmi:type="notation:Node" xmi:id="_EQr1INGSEeaX7oWy8yayuA" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_EQr1IdGSEeaX7oWy8yayuA" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_EQ1mINGSEeaX7oWy8yayuA" type="3003" element="_EQF_QdGSEeaX7oWy8yayuA">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_EQ1mIdGSEeaX7oWy8yayuA" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EQ1mItGSEeaX7oWy8yayuA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_EQY6MdGSEeaX7oWy8yayuA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_EQY6MtGSEeaX7oWy8yayuA" x="395" y="120" width="70" height="70"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_qqInedE-EeavYfFJsAFh4w"/>
       </data>
     </ownedAnnotationEntries>
@@ -280,9 +350,53 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']/@defaultLayer/@nodeMappings[name='Operations']"/>
     </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_EQF_QNGSEeaX7oWy8yayuA" name="New operation" width="7" height="7" resizeKind="NSEW">
+      <target xmi:type="com.projet.sirius:Operation" href="EvolutionArchi.metamodel#//@transitions.3/@operations.1"/>
+      <semanticElements xmi:type="com.projet.sirius:Operation" href="EvolutionArchi.metamodel#//@transitions.3/@operations.1"/>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_EQF_QdGSEeaX7oWy8yayuA" labelPosition="node" color="114,159,207">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']/@defaultLayer/@nodeMappings[name='Operations']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']/@defaultLayer/@nodeMappings[name='Operations']"/>
+    </ownedDiagramElements>
     <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']"/>
     <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_qqIndtE-EeavYfFJsAFh4w"/>
     <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']/@defaultLayer"/>
     <target xmi:type="com.projet.sirius:Transition" href="EvolutionArchi.metamodel#//@transitions.3"/>
+  </diagram:DSemanticDiagram>
+  <diagram:DSemanticDiagram xmi:id="_n5hVcdFIEeacEpTT7Fn_8A" name="Operations">
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_n5hVctFIEeacEpTT7Fn_8A" source="DANNOTATION_CUSTOMIZATION_KEY">
+      <data xmi:type="diagram:ComputedStyleDescriptionRegistry" xmi:id="_n5hVc9FIEeacEpTT7Fn_8A"/>
+    </ownedAnnotationEntries>
+    <ownedAnnotationEntries xmi:type="description:AnnotationEntry" xmi:id="_n5rtgNFIEeacEpTT7Fn_8A" source="GMF_DIAGRAMS">
+      <data xmi:type="notation:Diagram" xmi:id="_n5rtgdFIEeacEpTT7Fn_8A" type="Sirius" element="_n5hVcdFIEeacEpTT7Fn_8A" measurementUnit="Pixel">
+        <children xmi:type="notation:Node" xmi:id="_n5rtg9FIEeacEpTT7Fn_8A" type="2001" element="_n5hVdNFIEeacEpTT7Fn_8A">
+          <children xmi:type="notation:Node" xmi:id="_n503cNFIEeacEpTT7Fn_8A" type="5002">
+            <layoutConstraint xmi:type="notation:Location" xmi:id="_n503cdFIEeacEpTT7Fn_8A" y="5"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_n503ctFIEeacEpTT7Fn_8A" type="3003" element="_n5hVddFIEeacEpTT7Fn_8A">
+            <styles xmi:type="notation:ShapeStyle" xmi:id="_n503c9FIEeacEpTT7Fn_8A" fontName="Segoe UI"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n503dNFIEeacEpTT7Fn_8A"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_n5rthNFIEeacEpTT7Fn_8A" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_n5rthdFIEeacEpTT7Fn_8A" x="325" y="35" width="70" height="70"/>
+        </children>
+        <styles xmi:type="notation:DiagramStyle" xmi:id="_n5rtgtFIEeacEpTT7Fn_8A"/>
+      </data>
+    </ownedAnnotationEntries>
+    <ownedDiagramElements xmi:type="diagram:DNode" xmi:id="_n5hVdNFIEeacEpTT7Fn_8A" name="Three" width="7" height="7" resizeKind="NSEW">
+      <target xmi:type="com.projet.sirius:Operation" href="EvolutionArchi.metamodel#//@transitions.2/@operations.0"/>
+      <semanticElements xmi:type="com.projet.sirius:Operation" href="EvolutionArchi.metamodel#//@transitions.2/@operations.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
+      <ownedStyle xmi:type="diagram:Square" xmi:id="_n5hVddFIEeacEpTT7Fn_8A" labelPosition="node" color="114,159,207">
+        <description xmi:type="style:SquareDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']/@defaultLayer/@nodeMappings[name='Operations']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']/@defaultLayer/@nodeMappings[name='Operations']"/>
+    </ownedDiagramElements>
+    <description xmi:type="description_1:DiagramDescription" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']"/>
+    <filterVariableHistory xmi:type="diagram:FilterVariableHistory" xmi:id="_n5hVdtFIEeacEpTT7Fn_8A"/>
+    <activatedLayers xmi:type="description_1:Layer" href="platform:/resource/com.capstone.projet.dsl.design/description/dsl.odesign#//@ownedViewpoints[name='Path']/@ownedRepresentations[name='Operations']/@defaultLayer"/>
+    <target xmi:type="com.projet.sirius:Transition" href="EvolutionArchi.metamodel#//@transitions.2"/>
   </diagram:DSemanticDiagram>
 </xmi:XMI>
