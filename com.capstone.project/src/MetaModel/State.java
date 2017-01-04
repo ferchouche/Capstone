@@ -2,8 +2,6 @@
  */
 package MetaModel;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -16,8 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link MetaModel.State#getName <em>Name</em>}</li>
- *   <li>{@link MetaModel.State#getNext <em>Next</em>}</li>
- *   <li>{@link MetaModel.State#getPrev <em>Prev</em>}</li>
+ *   <li>{@link MetaModel.State#getImage <em>Image</em>}</li>
  * </ul>
  *
  * @see MetaModel.MetaModelPackage#getState()
@@ -52,35 +49,29 @@ public interface State extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Next</b></em>' reference list.
-	 * The list contents are of type {@link MetaModel.State}.
+	 * Returns the value of the '<em><b>Image</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Next</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Image</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Next</em>' reference list.
-	 * @see MetaModel.MetaModelPackage#getState_Next()
-	 * @model
+	 * @return the value of the '<em>Image</em>' reference.
+	 * @see #setImage(File)
+	 * @see MetaModel.MetaModelPackage#getState_Image()
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<State> getNext();
+	File getImage();
 
 	/**
-	 * Returns the value of the '<em><b>Prev</b></em>' reference list.
-	 * The list contents are of type {@link MetaModel.State}.
+	 * Sets the value of the '{@link MetaModel.State#getImage <em>Image</em>}' reference.
 	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Prev</em>' reference list isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prev</em>' reference list.
-	 * @see MetaModel.MetaModelPackage#getState_Prev()
-	 * @model
+	 * @param value the new value of the '<em>Image</em>' reference.
+	 * @see #getImage()
 	 * @generated
 	 */
-	EList<State> getPrev();
+	void setImage(File value);
 
 } // State

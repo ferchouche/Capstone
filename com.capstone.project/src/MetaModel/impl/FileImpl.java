@@ -4,65 +4,75 @@ package MetaModel.impl;
 
 import MetaModel.File;
 import MetaModel.MetaModelPackage;
-import MetaModel.State;
+
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>State</b></em>'.
+ * An implementation of the model object '<em><b>File</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link MetaModel.impl.StateImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetaModel.impl.StateImpl#getImage <em>Image</em>}</li>
+ *   <li>{@link MetaModel.impl.FileImpl#getPath <em>Path</em>}</li>
+ *   <li>{@link MetaModel.impl.FileImpl#getDescription <em>Description</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class StateImpl extends MinimalEObjectImpl.Container implements State {
+public class FileImpl extends MinimalEObjectImpl.Container implements File {
 	/**
-	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The default value of the '{@link #getPath() <em>Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final String NAME_EDEFAULT = null;
+	protected static final String PATH_EDEFAULT = null;
 
 	/**
-	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * The cached value of the '{@link #getPath() <em>Path</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getName()
+	 * @see #getPath()
 	 * @generated
 	 * @ordered
 	 */
-	protected String name = NAME_EDEFAULT;
+	protected String path = PATH_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getImage() <em>Image</em>}' reference.
+	 * The default value of the '{@link #getDescription() <em>Description</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getImage()
+	 * @see #getDescription()
 	 * @generated
 	 * @ordered
 	 */
-	protected File image;
+	protected static final String DESCRIPTION_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getDescription() <em>Description</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getDescription()
+	 * @generated
+	 * @ordered
+	 */
+	protected String description = DESCRIPTION_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected StateImpl() {
+	protected FileImpl() {
 		super();
 	}
 
@@ -73,7 +83,7 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MetaModelPackage.Literals.STATE;
+		return MetaModelPackage.Literals.FILE;
 	}
 
 	/**
@@ -81,8 +91,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getName() {
-		return name;
+	public String getPath() {
+		return path;
 	}
 
 	/**
@@ -90,11 +100,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setName(String newName) {
-		String oldName = name;
-		name = newName;
+	public void setPath(String newPath) {
+		String oldPath = path;
+		path = newPath;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.STATE__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.FILE__PATH, oldPath, path));
 	}
 
 	/**
@@ -102,16 +112,8 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public File getImage() {
-		if (image != null && image.eIsProxy()) {
-			InternalEObject oldImage = (InternalEObject)image;
-			image = (File)eResolveProxy(oldImage);
-			if (image != oldImage) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MetaModelPackage.STATE__IMAGE, oldImage, image));
-			}
-		}
-		return image;
+	public String getDescription() {
+		return description;
 	}
 
 	/**
@@ -119,20 +121,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public File basicGetImage() {
-		return image;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setImage(File newImage) {
-		File oldImage = image;
-		image = newImage;
+	public void setDescription(String newDescription) {
+		String oldDescription = description;
+		description = newDescription;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.STATE__IMAGE, oldImage, image));
+			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.FILE__DESCRIPTION, oldDescription, description));
 	}
 
 	/**
@@ -143,11 +136,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-			case MetaModelPackage.STATE__NAME:
-				return getName();
-			case MetaModelPackage.STATE__IMAGE:
-				if (resolve) return getImage();
-				return basicGetImage();
+			case MetaModelPackage.FILE__PATH:
+				return getPath();
+			case MetaModelPackage.FILE__DESCRIPTION:
+				return getDescription();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -157,15 +149,14 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-			case MetaModelPackage.STATE__NAME:
-				setName((String)newValue);
+			case MetaModelPackage.FILE__PATH:
+				setPath((String)newValue);
 				return;
-			case MetaModelPackage.STATE__IMAGE:
-				setImage((File)newValue);
+			case MetaModelPackage.FILE__DESCRIPTION:
+				setDescription((String)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -179,11 +170,11 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-			case MetaModelPackage.STATE__NAME:
-				setName(NAME_EDEFAULT);
+			case MetaModelPackage.FILE__PATH:
+				setPath(PATH_EDEFAULT);
 				return;
-			case MetaModelPackage.STATE__IMAGE:
-				setImage((File)null);
+			case MetaModelPackage.FILE__DESCRIPTION:
+				setDescription(DESCRIPTION_EDEFAULT);
 				return;
 		}
 		super.eUnset(featureID);
@@ -197,10 +188,10 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-			case MetaModelPackage.STATE__NAME:
-				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MetaModelPackage.STATE__IMAGE:
-				return image != null;
+			case MetaModelPackage.FILE__PATH:
+				return PATH_EDEFAULT == null ? path != null : !PATH_EDEFAULT.equals(path);
+			case MetaModelPackage.FILE__DESCRIPTION:
+				return DESCRIPTION_EDEFAULT == null ? description != null : !DESCRIPTION_EDEFAULT.equals(description);
 		}
 		return super.eIsSet(featureID);
 	}
@@ -215,10 +206,12 @@ public class StateImpl extends MinimalEObjectImpl.Container implements State {
 		if (eIsProxy()) return super.toString();
 
 		StringBuffer result = new StringBuffer(super.toString());
-		result.append(" (name: ");
-		result.append(name);
+		result.append(" (path: ");
+		result.append(path);
+		result.append(", description: ");
+		result.append(description);
 		result.append(')');
 		return result.toString();
 	}
 
-} //StateImpl
+} //FileImpl

@@ -3,32 +3,49 @@
 package MetaModel.provider;
 
 
-import MetaModel.IntermidiateState;
-
+import MetaModel.File;
 import MetaModel.MetaModelPackage;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
+import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
+import org.eclipse.emf.edit.provider.IItemLabelProvider;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.IItemPropertySource;
+import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
+import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
+import org.eclipse.emf.edit.provider.ItemProviderAdapter;
+import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link MetaModel.IntermidiateState} object.
+ * This is the item provider adapter for a {@link MetaModel.File} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class IntermidiateStateItemProvider extends StateItemProvider {
+public class FileItemProvider 
+	extends ItemProviderAdapter
+	implements
+		IEditingDomainItemProvider,
+		IStructuredItemContentProvider,
+		ITreeItemContentProvider,
+		IItemLabelProvider,
+		IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public IntermidiateStateItemProvider(AdapterFactory adapterFactory) {
+	public FileItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -43,65 +60,65 @@ public class IntermidiateStateItemProvider extends StateItemProvider {
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addNextPropertyDescriptor(object);
-			addPrevPropertyDescriptor(object);
+			addPathPropertyDescriptor(object);
+			addDescriptionPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Next feature.
+	 * This adds a property descriptor for the Path feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNextPropertyDescriptor(Object object) {
+	protected void addPathPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_IntermidiateState_next_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IntermidiateState_next_feature", "_UI_IntermidiateState_type"),
-				 MetaModelPackage.Literals.INTERMIDIATE_STATE__NEXT,
+				 getString("_UI_File_path_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_File_path_feature", "_UI_File_type"),
+				 MetaModelPackage.Literals.FILE__PATH,
 				 true,
 				 false,
-				 true,
-				 null,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Prev feature.
+	 * This adds a property descriptor for the Description feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPrevPropertyDescriptor(Object object) {
+	protected void addDescriptionPropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_IntermidiateState_prev_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_IntermidiateState_prev_feature", "_UI_IntermidiateState_type"),
-				 MetaModelPackage.Literals.INTERMIDIATE_STATE__PREV,
+				 getString("_UI_File_description_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_File_description_feature", "_UI_File_type"),
+				 MetaModelPackage.Literals.FILE__DESCRIPTION,
 				 true,
 				 false,
-				 true,
-				 null,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 				 null,
 				 null));
 	}
 
 	/**
-	 * This returns IntermidiateState.gif.
+	 * This returns File.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/IntermidiateState"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/File"));
 	}
 
 	/**
@@ -112,10 +129,10 @@ public class IntermidiateStateItemProvider extends StateItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((IntermidiateState)object).getName();
+		String label = ((File)object).getPath();
 		return label == null || label.length() == 0 ?
-			getString("_UI_IntermidiateState_type") :
-			getString("_UI_IntermidiateState_type") + " " + label;
+			getString("_UI_File_type") :
+			getString("_UI_File_type") + " " + label;
 	}
 	
 
@@ -129,6 +146,13 @@ public class IntermidiateStateItemProvider extends StateItemProvider {
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
+
+		switch (notification.getFeatureID(File.class)) {
+			case MetaModelPackage.FILE__PATH:
+			case MetaModelPackage.FILE__DESCRIPTION:
+				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+				return;
+		}
 		super.notifyChanged(notification);
 	}
 
@@ -142,6 +166,17 @@ public class IntermidiateStateItemProvider extends StateItemProvider {
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+	}
+
+	/**
+	 * Return the resource locator for this item provider's resources.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public ResourceLocator getResourceLocator() {
+		return MetaModelEditPlugin.INSTANCE;
 	}
 
 }

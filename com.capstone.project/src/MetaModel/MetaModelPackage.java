@@ -76,7 +76,7 @@ public interface MetaModelPackage extends EPackage {
 	int EVOLUTION_STYLE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Final Architecture</b></em>' containment reference.
+	 * The feature id for the '<em><b>Final Architecture</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -277,22 +277,13 @@ public interface MetaModelPackage extends EPackage {
 	int STATE__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Next</b></em>' reference list.
+	 * The feature id for the '<em><b>Image</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int STATE__NEXT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Prev</b></em>' reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int STATE__PREV = 2;
+	int STATE__IMAGE = 1;
 
 	/**
 	 * The number of structural features of the '<em>State</em>' class.
@@ -301,7 +292,7 @@ public interface MetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int STATE_FEATURE_COUNT = 3;
+	int STATE_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>State</em>' class.
@@ -332,22 +323,22 @@ public interface MetaModelPackage extends EPackage {
 	int INITIAL_STATE__NAME = STATE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Next</b></em>' reference list.
+	 * The feature id for the '<em><b>Image</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_STATE__NEXT = STATE__NEXT;
+	int INITIAL_STATE__IMAGE = STATE__IMAGE;
 
 	/**
-	 * The feature id for the '<em><b>Prev</b></em>' reference list.
+	 * The feature id for the '<em><b>Next</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_STATE__PREV = STATE__PREV;
+	int INITIAL_STATE__NEXT = STATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Initial State</em>' class.
@@ -356,7 +347,7 @@ public interface MetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INITIAL_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 0;
+	int INITIAL_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Initial State</em>' class.
@@ -387,13 +378,22 @@ public interface MetaModelPackage extends EPackage {
 	int INTERMIDIATE_STATE__NAME = STATE__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Image</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INTERMIDIATE_STATE__IMAGE = STATE__IMAGE;
+
+	/**
 	 * The feature id for the '<em><b>Next</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int INTERMIDIATE_STATE__NEXT = STATE__NEXT;
+	int INTERMIDIATE_STATE__NEXT = STATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Prev</b></em>' reference list.
@@ -402,7 +402,7 @@ public interface MetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERMIDIATE_STATE__PREV = STATE__PREV;
+	int INTERMIDIATE_STATE__PREV = STATE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Intermidiate State</em>' class.
@@ -411,7 +411,7 @@ public interface MetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int INTERMIDIATE_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 0;
+	int INTERMIDIATE_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Intermidiate State</em>' class.
@@ -442,22 +442,22 @@ public interface MetaModelPackage extends EPackage {
 	int FINAL_STATE__NAME = STATE__NAME;
 
 	/**
-	 * The feature id for the '<em><b>Next</b></em>' reference list.
+	 * The feature id for the '<em><b>Image</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINAL_STATE__NEXT = STATE__NEXT;
+	int FINAL_STATE__IMAGE = STATE__IMAGE;
 
 	/**
-	 * The feature id for the '<em><b>Prev</b></em>' reference list.
+	 * The feature id for the '<em><b>Prev</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FINAL_STATE__PREV = STATE__PREV;
+	int FINAL_STATE__PREV = STATE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Final State</em>' class.
@@ -466,7 +466,7 @@ public interface MetaModelPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FINAL_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 0;
+	int FINAL_STATE_FEATURE_COUNT = STATE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Final State</em>' class.
@@ -476,6 +476,53 @@ public interface MetaModelPackage extends EPackage {
 	 * @ordered
 	 */
 	int FINAL_STATE_OPERATION_COUNT = STATE_OPERATION_COUNT + 0;
+
+
+	/**
+	 * The meta object id for the '{@link MetaModel.impl.FileImpl <em>File</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see MetaModel.impl.FileImpl
+	 * @see MetaModel.impl.MetaModelPackageImpl#getFile()
+	 * @generated
+	 */
+	int FILE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Path</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__PATH = 0;
+
+	/**
+	 * The feature id for the '<em><b>Description</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE__DESCRIPTION = 1;
+
+	/**
+	 * The number of structural features of the '<em>File</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>File</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FILE_OPERATION_COUNT = 0;
 
 
 	/**
@@ -500,10 +547,10 @@ public interface MetaModelPackage extends EPackage {
 	EAttribute getEvolutionStyle_Name();
 
 	/**
-	 * Returns the meta object for the containment reference '{@link MetaModel.EvolutionStyle#getFinalArchitecture <em>Final Architecture</em>}'.
+	 * Returns the meta object for the reference '{@link MetaModel.EvolutionStyle#getFinalArchitecture <em>Final Architecture</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference '<em>Final Architecture</em>'.
+	 * @return the meta object for the reference '<em>Final Architecture</em>'.
 	 * @see MetaModel.EvolutionStyle#getFinalArchitecture()
 	 * @see #getEvolutionStyle()
 	 * @generated
@@ -673,26 +720,15 @@ public interface MetaModelPackage extends EPackage {
 	EAttribute getState_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link MetaModel.State#getNext <em>Next</em>}'.
+	 * Returns the meta object for the reference '{@link MetaModel.State#getImage <em>Image</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Next</em>'.
-	 * @see MetaModel.State#getNext()
+	 * @return the meta object for the reference '<em>Image</em>'.
+	 * @see MetaModel.State#getImage()
 	 * @see #getState()
 	 * @generated
 	 */
-	EReference getState_Next();
-
-	/**
-	 * Returns the meta object for the reference list '{@link MetaModel.State#getPrev <em>Prev</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Prev</em>'.
-	 * @see MetaModel.State#getPrev()
-	 * @see #getState()
-	 * @generated
-	 */
-	EReference getState_Prev();
+	EReference getState_Image();
 
 	/**
 	 * Returns the meta object for class '{@link MetaModel.InitialState <em>Initial State</em>}'.
@@ -705,6 +741,17 @@ public interface MetaModelPackage extends EPackage {
 	EClass getInitialState();
 
 	/**
+	 * Returns the meta object for the reference '{@link MetaModel.InitialState#getNext <em>Next</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Next</em>'.
+	 * @see MetaModel.InitialState#getNext()
+	 * @see #getInitialState()
+	 * @generated
+	 */
+	EReference getInitialState_Next();
+
+	/**
 	 * Returns the meta object for class '{@link MetaModel.IntermidiateState <em>Intermidiate State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -715,6 +762,28 @@ public interface MetaModelPackage extends EPackage {
 	EClass getIntermidiateState();
 
 	/**
+	 * Returns the meta object for the reference list '{@link MetaModel.IntermidiateState#getNext <em>Next</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Next</em>'.
+	 * @see MetaModel.IntermidiateState#getNext()
+	 * @see #getIntermidiateState()
+	 * @generated
+	 */
+	EReference getIntermidiateState_Next();
+
+	/**
+	 * Returns the meta object for the reference list '{@link MetaModel.IntermidiateState#getPrev <em>Prev</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Prev</em>'.
+	 * @see MetaModel.IntermidiateState#getPrev()
+	 * @see #getIntermidiateState()
+	 * @generated
+	 */
+	EReference getIntermidiateState_Prev();
+
+	/**
 	 * Returns the meta object for class '{@link MetaModel.FinalState <em>Final State</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -723,6 +792,49 @@ public interface MetaModelPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFinalState();
+
+	/**
+	 * Returns the meta object for the reference '{@link MetaModel.FinalState#getPrev <em>Prev</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Prev</em>'.
+	 * @see MetaModel.FinalState#getPrev()
+	 * @see #getFinalState()
+	 * @generated
+	 */
+	EReference getFinalState_Prev();
+
+	/**
+	 * Returns the meta object for class '{@link MetaModel.File <em>File</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>File</em>'.
+	 * @see MetaModel.File
+	 * @generated
+	 */
+	EClass getFile();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetaModel.File#getPath <em>Path</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Path</em>'.
+	 * @see MetaModel.File#getPath()
+	 * @see #getFile()
+	 * @generated
+	 */
+	EAttribute getFile_Path();
+
+	/**
+	 * Returns the meta object for the attribute '{@link MetaModel.File#getDescription <em>Description</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Description</em>'.
+	 * @see MetaModel.File#getDescription()
+	 * @see #getFile()
+	 * @generated
+	 */
+	EAttribute getFile_Description();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -766,7 +878,7 @@ public interface MetaModelPackage extends EPackage {
 		EAttribute EVOLUTION_STYLE__NAME = eINSTANCE.getEvolutionStyle_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Final Architecture</b></em>' containment reference feature.
+		 * The meta object literal for the '<em><b>Final Architecture</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -900,20 +1012,12 @@ public interface MetaModelPackage extends EPackage {
 		EAttribute STATE__NAME = eINSTANCE.getState_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Next</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Image</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference STATE__NEXT = eINSTANCE.getState_Next();
-
-		/**
-		 * The meta object literal for the '<em><b>Prev</b></em>' reference list feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference STATE__PREV = eINSTANCE.getState_Prev();
+		EReference STATE__IMAGE = eINSTANCE.getState_Image();
 
 		/**
 		 * The meta object literal for the '{@link MetaModel.impl.InitialStateImpl <em>Initial State</em>}' class.
@@ -926,6 +1030,14 @@ public interface MetaModelPackage extends EPackage {
 		EClass INITIAL_STATE = eINSTANCE.getInitialState();
 
 		/**
+		 * The meta object literal for the '<em><b>Next</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INITIAL_STATE__NEXT = eINSTANCE.getInitialState_Next();
+
+		/**
 		 * The meta object literal for the '{@link MetaModel.impl.IntermidiateStateImpl <em>Intermidiate State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -936,6 +1048,22 @@ public interface MetaModelPackage extends EPackage {
 		EClass INTERMIDIATE_STATE = eINSTANCE.getIntermidiateState();
 
 		/**
+		 * The meta object literal for the '<em><b>Next</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERMIDIATE_STATE__NEXT = eINSTANCE.getIntermidiateState_Next();
+
+		/**
+		 * The meta object literal for the '<em><b>Prev</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference INTERMIDIATE_STATE__PREV = eINSTANCE.getIntermidiateState_Prev();
+
+		/**
 		 * The meta object literal for the '{@link MetaModel.impl.FinalStateImpl <em>Final State</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -944,6 +1072,40 @@ public interface MetaModelPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FINAL_STATE = eINSTANCE.getFinalState();
+
+		/**
+		 * The meta object literal for the '<em><b>Prev</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference FINAL_STATE__PREV = eINSTANCE.getFinalState_Prev();
+
+		/**
+		 * The meta object literal for the '{@link MetaModel.impl.FileImpl <em>File</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see MetaModel.impl.FileImpl
+		 * @see MetaModel.impl.MetaModelPackageImpl#getFile()
+		 * @generated
+		 */
+		EClass FILE = eINSTANCE.getFile();
+
+		/**
+		 * The meta object literal for the '<em><b>Path</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FILE__PATH = eINSTANCE.getFile_Path();
+
+		/**
+		 * The meta object literal for the '<em><b>Description</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FILE__DESCRIPTION = eINSTANCE.getFile_Description();
 
 	}
 

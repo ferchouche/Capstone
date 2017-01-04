@@ -53,26 +53,26 @@ public interface EvolutionStyle extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Final Architecture</b></em>' containment reference.
+	 * Returns the value of the '<em><b>Final Architecture</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Final Architecture</em>' reference isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Final Architecture</em>' containment reference.
+	 * @return the value of the '<em>Final Architecture</em>' reference.
 	 * @see #setFinalArchitecture(FinalState)
 	 * @see MetaModel.MetaModelPackage#getEvolutionStyle_FinalArchitecture()
-	 * @model containment="true" required="true"
+	 * @model required="true"
 	 * @generated
 	 */
 	FinalState getFinalArchitecture();
 
 	/**
-	 * Sets the value of the '{@link MetaModel.EvolutionStyle#getFinalArchitecture <em>Final Architecture</em>}' containment reference.
+	 * Sets the value of the '{@link MetaModel.EvolutionStyle#getFinalArchitecture <em>Final Architecture</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Final Architecture</em>' containment reference.
+	 * @param value the new value of the '<em>Final Architecture</em>' reference.
 	 * @see #getFinalArchitecture()
 	 * @generated
 	 */

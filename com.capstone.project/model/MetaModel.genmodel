@@ -8,7 +8,7 @@
   <genPackages prefix="MetaModel" disposableProviderFactory="true" ecorePackage="MetaModel.ecore#/">
     <genClasses ecoreClass="MetaModel.ecore#//EvolutionStyle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//EvolutionStyle/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/FinalArchitecture"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/FinalArchitecture"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/transitions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/InitialArchitecture"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/states"/>
@@ -27,11 +27,21 @@
     </genClasses>
     <genClasses ecoreClass="MetaModel.ecore#//State">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//State/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//State/next"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//State/prev"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//State/image"/>
     </genClasses>
-    <genClasses ecoreClass="MetaModel.ecore#//InitialState"/>
-    <genClasses ecoreClass="MetaModel.ecore#//IntermidiateState"/>
-    <genClasses ecoreClass="MetaModel.ecore#//FinalState"/>
+    <genClasses ecoreClass="MetaModel.ecore#//InitialState">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//InitialState/next"/>
+    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//IntermidiateState">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//IntermidiateState/next"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//IntermidiateState/prev"/>
+    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//FinalState">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//FinalState/prev"/>
+    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//File">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//File/path"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//File/description"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -61,8 +61,7 @@ public class StateItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addNextPropertyDescriptor(object);
-			addPrevPropertyDescriptor(object);
+			addImagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -90,41 +89,19 @@ public class StateItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Next feature.
+	 * This adds a property descriptor for the Image feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addNextPropertyDescriptor(Object object) {
+	protected void addImagePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_State_next_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_State_next_feature", "_UI_State_type"),
-				 MetaModelPackage.Literals.STATE__NEXT,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Prev feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addPrevPropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_State_prev_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_State_prev_feature", "_UI_State_type"),
-				 MetaModelPackage.Literals.STATE__PREV,
+				 getString("_UI_State_image_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_State_image_feature", "_UI_State_type"),
+				 MetaModelPackage.Literals.STATE__IMAGE,
 				 true,
 				 false,
 				 true,

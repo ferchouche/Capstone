@@ -59,7 +59,7 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getFinalArchitecture() <em>Final Architecture</em>}' containment reference.
+	 * The cached value of the '{@link #getFinalArchitecture() <em>Final Architecture</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getFinalArchitecture()
@@ -144,6 +144,14 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public FinalState getFinalArchitecture() {
+		if (finalArchitecture != null && finalArchitecture.eIsProxy()) {
+			InternalEObject oldFinalArchitecture = (InternalEObject)finalArchitecture;
+			finalArchitecture = (FinalState)eResolveProxy(oldFinalArchitecture);
+			if (finalArchitecture != oldFinalArchitecture) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, oldFinalArchitecture, finalArchitecture));
+			}
+		}
 		return finalArchitecture;
 	}
 
@@ -152,14 +160,8 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFinalArchitecture(FinalState newFinalArchitecture, NotificationChain msgs) {
-		FinalState oldFinalArchitecture = finalArchitecture;
-		finalArchitecture = newFinalArchitecture;
-		if (eNotificationRequired()) {
-			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, oldFinalArchitecture, newFinalArchitecture);
-			if (msgs == null) msgs = notification; else msgs.add(notification);
-		}
-		return msgs;
+	public FinalState basicGetFinalArchitecture() {
+		return finalArchitecture;
 	}
 
 	/**
@@ -168,17 +170,10 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 	 * @generated
 	 */
 	public void setFinalArchitecture(FinalState newFinalArchitecture) {
-		if (newFinalArchitecture != finalArchitecture) {
-			NotificationChain msgs = null;
-			if (finalArchitecture != null)
-				msgs = ((InternalEObject)finalArchitecture).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, null, msgs);
-			if (newFinalArchitecture != null)
-				msgs = ((InternalEObject)newFinalArchitecture).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, null, msgs);
-			msgs = basicSetFinalArchitecture(newFinalArchitecture, msgs);
-			if (msgs != null) msgs.dispatch();
-		}
-		else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, newFinalArchitecture, newFinalArchitecture));
+		FinalState oldFinalArchitecture = finalArchitecture;
+		finalArchitecture = newFinalArchitecture;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, oldFinalArchitecture, finalArchitecture));
 	}
 
 	/**
@@ -256,8 +251,6 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
-				return basicSetFinalArchitecture(null, msgs);
 			case MetaModelPackage.EVOLUTION_STYLE__TRANSITIONS:
 				return ((InternalEList<?>)getTransitions()).basicRemove(otherEnd, msgs);
 			case MetaModelPackage.EVOLUTION_STYLE__INITIAL_ARCHITECTURE:
@@ -279,7 +272,8 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 			case MetaModelPackage.EVOLUTION_STYLE__NAME:
 				return getName();
 			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
-				return getFinalArchitecture();
+				if (resolve) return getFinalArchitecture();
+				return basicGetFinalArchitecture();
 			case MetaModelPackage.EVOLUTION_STYLE__TRANSITIONS:
 				return getTransitions();
 			case MetaModelPackage.EVOLUTION_STYLE__INITIAL_ARCHITECTURE:

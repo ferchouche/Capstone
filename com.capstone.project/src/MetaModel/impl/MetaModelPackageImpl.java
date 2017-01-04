@@ -3,6 +3,7 @@
 package MetaModel.impl;
 
 import MetaModel.EvolutionStyle;
+import MetaModel.File;
 import MetaModel.FinalState;
 import MetaModel.InitialState;
 import MetaModel.IntermidiateState;
@@ -74,6 +75,13 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 	 * @generated
 	 */
 	private EClass finalStateEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass fileEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -303,17 +311,8 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getState_Next() {
+	public EReference getState_Image() {
 		return (EReference)stateEClass.getEStructuralFeatures().get(1);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getState_Prev() {
-		return (EReference)stateEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -330,6 +329,15 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getInitialState_Next() {
+		return (EReference)initialStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getIntermidiateState() {
 		return intermidiateStateEClass;
 	}
@@ -339,8 +347,62 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getIntermidiateState_Next() {
+		return (EReference)intermidiateStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getIntermidiateState_Prev() {
+		return (EReference)intermidiateStateEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getFinalState() {
 		return finalStateEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getFinalState_Prev() {
+		return (EReference)finalStateEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getFile() {
+		return fileEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFile_Path() {
+		return (EAttribute)fileEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getFile_Description() {
+		return (EAttribute)fileEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -392,14 +454,21 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 
 		stateEClass = createEClass(STATE);
 		createEAttribute(stateEClass, STATE__NAME);
-		createEReference(stateEClass, STATE__NEXT);
-		createEReference(stateEClass, STATE__PREV);
+		createEReference(stateEClass, STATE__IMAGE);
 
 		initialStateEClass = createEClass(INITIAL_STATE);
+		createEReference(initialStateEClass, INITIAL_STATE__NEXT);
 
 		intermidiateStateEClass = createEClass(INTERMIDIATE_STATE);
+		createEReference(intermidiateStateEClass, INTERMIDIATE_STATE__NEXT);
+		createEReference(intermidiateStateEClass, INTERMIDIATE_STATE__PREV);
 
 		finalStateEClass = createEClass(FINAL_STATE);
+		createEReference(finalStateEClass, FINAL_STATE__PREV);
+
+		fileEClass = createEClass(FILE);
+		createEAttribute(fileEClass, FILE__PATH);
+		createEAttribute(fileEClass, FILE__DESCRIPTION);
 	}
 
 	/**
@@ -437,7 +506,7 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 		// Initialize classes, features, and operations; add parameters
 		initEClass(evolutionStyleEClass, EvolutionStyle.class, "EvolutionStyle", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getEvolutionStyle_Name(), ecorePackage.getEString(), "name", null, 0, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getEvolutionStyle_FinalArchitecture(), this.getFinalState(), null, "FinalArchitecture", null, 1, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getEvolutionStyle_FinalArchitecture(), this.getFinalState(), null, "FinalArchitecture", null, 1, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvolutionStyle_Transitions(), this.getTransition(), null, "transitions", null, 1, -1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvolutionStyle_InitialArchitecture(), this.getInitialState(), null, "InitialArchitecture", null, 1, 1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getEvolutionStyle_States(), this.getIntermidiateState(), null, "states", null, 1, -1, EvolutionStyle.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -456,14 +525,21 @@ public class MetaModelPackageImpl extends EPackageImpl implements MetaModelPacka
 
 		initEClass(stateEClass, State.class, "State", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getState_Name(), ecorePackage.getEString(), "name", null, 0, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getState_Next(), this.getState(), null, "next", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getState_Prev(), this.getState(), null, "prev", null, 0, -1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getState_Image(), this.getFile(), null, "image", null, 1, 1, State.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(initialStateEClass, InitialState.class, "InitialState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getInitialState_Next(), this.getState(), null, "next", null, 1, 1, InitialState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(intermidiateStateEClass, IntermidiateState.class, "IntermidiateState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getIntermidiateState_Next(), this.getState(), null, "next", null, 1, -1, IntermidiateState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getIntermidiateState_Prev(), this.getState(), null, "prev", null, 1, -1, IntermidiateState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(finalStateEClass, FinalState.class, "FinalState", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getFinalState_Prev(), this.getState(), null, "prev", null, 1, 1, FinalState.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(fileEClass, File.class, "File", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getFile_Path(), ecorePackage.getEString(), "path", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getFile_Description(), ecorePackage.getEString(), "description", null, 0, 1, File.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);
