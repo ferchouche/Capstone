@@ -8,10 +8,10 @@
   <genPackages prefix="MetaModel" disposableProviderFactory="true" ecorePackage="MetaModel.ecore#/">
     <genClasses ecoreClass="MetaModel.ecore#//EvolutionStyle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//EvolutionStyle/name"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/FinalArchitecture"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/transitions"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/InitialArchitecture"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/states"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//EvolutionStyle/FinalArchitecture"/>
     </genClasses>
     <genClasses ecoreClass="MetaModel.ecore#//Transition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//Transition/name"/>
@@ -36,9 +36,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//IntermidiateState/next"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//IntermidiateState/prev"/>
     </genClasses>
-    <genClasses ecoreClass="MetaModel.ecore#//FinalState">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MetaModel.ecore#//FinalState/prev"/>
-    </genClasses>
+    <genClasses ecoreClass="MetaModel.ecore#//FinalState"/>
     <genClasses ecoreClass="MetaModel.ecore#//File">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//File/path"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MetaModel.ecore#//File/description"/>

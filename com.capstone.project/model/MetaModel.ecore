@@ -3,14 +3,14 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="MetaModel" nsURI="com.projet.sirius" nsPrefix="com.projet.sirius">
   <eClassifiers xsi:type="ecore:EClass" name="EvolutionStyle">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="FinalArchitecture" lowerBound="1"
-        eType="#//FinalState"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="transitions" lowerBound="1"
         upperBound="-1" eType="#//Transition" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="InitialArchitecture" lowerBound="1"
         eType="#//InitialState" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" lowerBound="1"
         upperBound="-1" eType="#//IntermidiateState" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="finalArchitecture" lowerBound="1"
+        eType="#//FinalState" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Transition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -27,12 +27,12 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="time" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloatObject"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="State">
+  <eClassifiers xsi:type="ecore:EClass" name="State" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="image" lowerBound="1" eType="#//File"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InitialState" eSuperTypes="#//State">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="next" lowerBound="1" eType="#//State"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="next" lowerBound="1" upperBound="-1"
+        eType="#//State"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="IntermidiateState" eSuperTypes="#//State">
     <eStructuralFeatures xsi:type="ecore:EReference" name="next" lowerBound="1" upperBound="-1"
@@ -41,10 +41,7 @@
         eType="#//State"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FinalState" eSuperTypes="#//State">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="prev" lowerBound="1" eType="#//State"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="File">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="path" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="prev" lowerBound="1" upperBound="-1"
+        eType="#//State"/>
   </eClassifiers>
 </ecore:EPackage>

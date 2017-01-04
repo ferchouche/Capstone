@@ -6,10 +6,10 @@ import MetaModel.FinalState;
 import MetaModel.MetaModelPackage;
 
 import MetaModel.State;
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,14 +26,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class FinalStateImpl extends StateImpl implements FinalState {
 	/**
-	 * The cached value of the '{@link #getPrev() <em>Prev</em>}' reference.
+	 * The cached value of the '{@link #getPrev() <em>Prev</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getPrev()
 	 * @generated
 	 * @ordered
 	 */
-	protected State prev;
+	protected EList<State> prev;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -59,37 +59,11 @@ public class FinalStateImpl extends StateImpl implements FinalState {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State getPrev() {
-		if (prev != null && prev.eIsProxy()) {
-			InternalEObject oldPrev = (InternalEObject)prev;
-			prev = (State)eResolveProxy(oldPrev);
-			if (prev != oldPrev) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MetaModelPackage.FINAL_STATE__PREV, oldPrev, prev));
-			}
+	public EList<State> getPrev() {
+		if (prev == null) {
+			prev = new EObjectResolvingEList<State>(State.class, this, MetaModelPackage.FINAL_STATE__PREV);
 		}
 		return prev;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public State basicGetPrev() {
-		return prev;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setPrev(State newPrev) {
-		State oldPrev = prev;
-		prev = newPrev;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.FINAL_STATE__PREV, oldPrev, prev));
 	}
 
 	/**
@@ -101,8 +75,7 @@ public class FinalStateImpl extends StateImpl implements FinalState {
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 			case MetaModelPackage.FINAL_STATE__PREV:
-				if (resolve) return getPrev();
-				return basicGetPrev();
+				return getPrev();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -112,11 +85,13 @@ public class FinalStateImpl extends StateImpl implements FinalState {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 			case MetaModelPackage.FINAL_STATE__PREV:
-				setPrev((State)newValue);
+				getPrev().clear();
+				getPrev().addAll((Collection<? extends State>)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -131,7 +106,7 @@ public class FinalStateImpl extends StateImpl implements FinalState {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 			case MetaModelPackage.FINAL_STATE__PREV:
-				setPrev((State)null);
+				getPrev().clear();
 				return;
 		}
 		super.eUnset(featureID);
@@ -146,7 +121,7 @@ public class FinalStateImpl extends StateImpl implements FinalState {
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
 			case MetaModelPackage.FINAL_STATE__PREV:
-				return prev != null;
+				return prev != null && !prev.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

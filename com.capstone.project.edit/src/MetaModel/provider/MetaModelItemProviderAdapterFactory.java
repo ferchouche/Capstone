@@ -141,29 +141,6 @@ public class MetaModelItemProviderAdapterFactory extends MetaModelAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link MetaModel.State} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected StateItemProvider stateItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link MetaModel.State}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createStateAdapter() {
-		if (stateItemProvider == null) {
-			stateItemProvider = new StateItemProvider(this);
-		}
-
-		return stateItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link MetaModel.InitialState} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -230,29 +207,6 @@ public class MetaModelItemProviderAdapterFactory extends MetaModelAdapterFactory
 		}
 
 		return finalStateItemProvider;
-	}
-
-	/**
-	 * This keeps track of the one adapter used for all {@link MetaModel.File} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected FileItemProvider fileItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link MetaModel.File}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createFileAdapter() {
-		if (fileItemProvider == null) {
-			fileItemProvider = new FileItemProvider(this);
-		}
-
-		return fileItemProvider;
 	}
 
 	/**
@@ -357,11 +311,9 @@ public class MetaModelItemProviderAdapterFactory extends MetaModelAdapterFactory
 		if (evolutionStyleItemProvider != null) evolutionStyleItemProvider.dispose();
 		if (transitionItemProvider != null) transitionItemProvider.dispose();
 		if (operationItemProvider != null) operationItemProvider.dispose();
-		if (stateItemProvider != null) stateItemProvider.dispose();
 		if (initialStateItemProvider != null) initialStateItemProvider.dispose();
 		if (intermidiateStateItemProvider != null) intermidiateStateItemProvider.dispose();
 		if (finalStateItemProvider != null) finalStateItemProvider.dispose();
-		if (fileItemProvider != null) fileItemProvider.dispose();
 	}
 
 }

@@ -4,8 +4,8 @@ package MetaModel.provider;
 
 
 import MetaModel.IntermidiateState;
-
 import MetaModel.MetaModelPackage;
+
 import java.util.Collection;
 import java.util.List;
 

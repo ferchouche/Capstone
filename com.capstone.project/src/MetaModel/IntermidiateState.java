@@ -4,7 +4,6 @@ package MetaModel;
 
 import org.eclipse.emf.common.util.EList;
 
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Intermidiate State</b></em>'.
@@ -23,7 +22,6 @@ import org.eclipse.emf.common.util.EList;
  * @generated
  */
 public interface IntermidiateState extends State {
-
 	/**
 	 * Returns the value of the '<em><b>Next</b></em>' reference list.
 	 * The list contents are of type {@link MetaModel.State}.
@@ -55,4 +53,5 @@ public interface IntermidiateState extends State {
 	 * @generated
 	 */
 	EList<State> getPrev();
+
 } // IntermidiateState

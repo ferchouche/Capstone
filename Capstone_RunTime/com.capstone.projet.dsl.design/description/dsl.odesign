@@ -25,7 +25,14 @@
           </style>
         </nodeMappings>
         <nodeMappings name="State" domainClass="MetaModel.State"/>
-        <edgeMappings name="InitialToInter" label="InitialToInter" doubleClickDescription="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@toolSections.2/@ownedTools[name='Show%20Operations']" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='InitialState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="MetaModel.Transition" useDomainElement="true">
+        <nodeMappings name="Transition" doubleClickDescription="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@toolSections.2/@ownedTools[name='Show%20Operations']" domainClass="MetaModel.Transition">
+          <style xsi:type="style:LozengeNodeDescription" sizeComputationExpression="10" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+          </style>
+        </nodeMappings>
+        <edgeMappings name="InitialToTran" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='Transition']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='InitialState']" targetFinderExpression="feature:source">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -33,7 +40,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="InterToInter" doubleClickDescription="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@toolSections.2/@ownedTools[name='Show%20Operations']" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="MetaModel.Transition" useDomainElement="true">
+        <edgeMappings name="TranToInter" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='Transition']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetFinderExpression="feature:target">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -41,7 +48,15 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="InterToFinal" doubleClickDescription="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@toolSections.2/@ownedTools[name='Show%20Operations']" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='FinalState']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="MetaModel.Transition" useDomainElement="true">
+        <edgeMappings name="InterToTran" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='Transition']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetFinderExpression="feature:source">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="TranToFinal" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='Transition']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='FinalState']" targetFinderExpression="feature:target">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription>
@@ -66,8 +81,8 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.FinalState" referenceName="states">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="new FinalState"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.FinalState" referenceName="finalArchitecture">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="FinalState"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
@@ -77,7 +92,7 @@
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.InitialState" referenceName="states">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.InitialState" referenceName="InitialArchitecture">
                   <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="InitialState"/>
                 </subModelOperations>
               </firstModelOperations>
@@ -85,65 +100,20 @@
           </ownedTools>
         </toolSections>
         <toolSections name="New Transition">
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="IntialToInter" edgeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InitialToInter']">
-            <sourceVariable name="source"/>
-            <targetVariable name="target"/>
-            <sourceViewVariable name="sourceView"/>
-            <targetViewVariable name="targetView"/>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="Transition" forceRefresh="true" nodeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='Transition']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext">
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="prev" valueExpression="var:source"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="var:target"/>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InterToInter" label="InterToInter" edgeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InterToInter']">
-            <sourceVariable name="source"/>
-            <targetVariable name="target"/>
-            <sourceViewVariable name="sourceView"/>
-            <targetViewVariable name="targetView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext">
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="var:target"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="prev" valueExpression="var:source"/>
-                </subModelOperations>
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.Transition" referenceName="transitions">
-                  <subModelOperations xsi:type="tool:CreateEdgeView" mapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InterToInter']" containerViewExpression="feature:" sourceExpression="var:source" targetExpression="var:target">
-                    <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="fefe"/>
-                  </subModelOperations>
-                </subModelOperations>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
-          <ownedTools xsi:type="tool:EdgeCreationDescription" name="InterToFianl" edgeMappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InterToFinal']">
-            <sourceVariable name="source"/>
-            <targetVariable name="target"/>
-            <sourceViewVariable name="sourceView"/>
-            <targetViewVariable name="targetView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:target">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="prev" valueExpression="var:source"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool_1:ChangeContext" browseExpression="var:source">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="next" valueExpression="var:target"/>
-                </subModelOperations>
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="MetaModel.Transition" referenceName="transitions">
-                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="new tran"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="name" valueExpression="new Transition"/>
                 </subModelOperations>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
         </toolSections>
         <toolSections name="Navigation">
-          <ownedTools xsi:type="tool:DoubleClickDescription" name="Show Operations" forceRefresh="true" mappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InitialToInter'] //@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InterToInter'] //@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@edgeMappings[name='InterToFinal']">
+          <ownedTools xsi:type="tool:DoubleClickDescription" name="Show Operations" forceRefresh="true" mappings="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='Transition']">
             <element name="element"/>
             <elementView name="elementView"/>
             <initialOperation>
@@ -152,6 +122,32 @@
           </ownedTools>
         </toolSections>
       </defaultLayer>
+      <additionalLayers>
+        <edgeMappings name="InitialToInter" label="InitialToInter" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='InitialState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="MetaModel.Transition" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="InterToInter" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="MetaModel.Transition" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="InterToFinal" synchronizationLock="true" sourceMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='IntermediateState']" targetMapping="//@ownedViewpoints[name='Path']/@ownedRepresentations[name='EvolutionStyle_Rep']/@defaultLayer/@nodeMappings[name='FinalState']" targetFinderExpression="feature:target" sourceFinderExpression="feature:source" domainClass="MetaModel.Transition" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+      </additionalLayers>
     </ownedRepresentations>
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Operations" domainClass="MetaModel.Transition" enablePopupBars="true">
       <defaultLayer name="TransitionOperation">

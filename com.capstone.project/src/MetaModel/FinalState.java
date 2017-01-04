@@ -2,6 +2,8 @@
  */
 package MetaModel;
 
+import org.eclipse.emf.common.util.EList;
+
 
 /**
  * <!-- begin-user-doc -->
@@ -22,28 +24,18 @@ package MetaModel;
 public interface FinalState extends State {
 
 	/**
-	 * Returns the value of the '<em><b>Prev</b></em>' reference.
+	 * Returns the value of the '<em><b>Prev</b></em>' reference list.
+	 * The list contents are of type {@link MetaModel.State}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Prev</em>' reference isn't clear,
+	 * If the meaning of the '<em>Prev</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Prev</em>' reference.
-	 * @see #setPrev(State)
+	 * @return the value of the '<em>Prev</em>' reference list.
 	 * @see MetaModel.MetaModelPackage#getFinalState_Prev()
 	 * @model required="true"
 	 * @generated
 	 */
-	State getPrev();
-
-	/**
-	 * Sets the value of the '{@link MetaModel.FinalState#getPrev <em>Prev</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Prev</em>' reference.
-	 * @see #getPrev()
-	 * @generated
-	 */
-	void setPrev(State value);
+	EList<State> getPrev();
 } // FinalState

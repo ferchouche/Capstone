@@ -64,7 +64,6 @@ public class EvolutionStyleItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addFinalArchitecturePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -92,28 +91,6 @@ public class EvolutionStyleItemProvider
 	}
 
 	/**
-	 * This adds a property descriptor for the Final Architecture feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addFinalArchitecturePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_EvolutionStyle_FinalArchitecture_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_EvolutionStyle_FinalArchitecture_feature", "_UI_EvolutionStyle_type"),
-				 MetaModelPackage.Literals.EVOLUTION_STYLE__FINAL_ARCHITECTURE,
-				 true,
-				 false,
-				 true,
-				 null,
-				 null,
-				 null));
-	}
-
-	/**
 	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
 	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
 	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
@@ -128,6 +105,7 @@ public class EvolutionStyleItemProvider
 			childrenFeatures.add(MetaModelPackage.Literals.EVOLUTION_STYLE__TRANSITIONS);
 			childrenFeatures.add(MetaModelPackage.Literals.EVOLUTION_STYLE__INITIAL_ARCHITECTURE);
 			childrenFeatures.add(MetaModelPackage.Literals.EVOLUTION_STYLE__STATES);
+			childrenFeatures.add(MetaModelPackage.Literals.EVOLUTION_STYLE__FINAL_ARCHITECTURE);
 		}
 		return childrenFeatures;
 	}
@@ -189,6 +167,7 @@ public class EvolutionStyleItemProvider
 			case MetaModelPackage.EVOLUTION_STYLE__TRANSITIONS:
 			case MetaModelPackage.EVOLUTION_STYLE__INITIAL_ARCHITECTURE:
 			case MetaModelPackage.EVOLUTION_STYLE__STATES:
+			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 				return;
 		}
@@ -220,6 +199,11 @@ public class EvolutionStyleItemProvider
 			(createChildParameter
 				(MetaModelPackage.Literals.EVOLUTION_STYLE__STATES,
 				 MetaModelFactory.eINSTANCE.createIntermidiateState()));
+
+		newChildDescriptors.add
+			(createChildParameter
+				(MetaModelPackage.Literals.EVOLUTION_STYLE__FINAL_ARCHITECTURE,
+				 MetaModelFactory.eINSTANCE.createFinalState()));
 	}
 
 	/**

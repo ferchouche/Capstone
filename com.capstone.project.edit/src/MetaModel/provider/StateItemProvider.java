@@ -61,7 +61,6 @@ public class StateItemProvider
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addImagePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -84,28 +83,6 @@ public class StateItemProvider
 				 false,
 				 false,
 				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
-				 null,
-				 null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Image feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addImagePropertyDescriptor(Object object) {
-		itemPropertyDescriptors.add
-			(createItemPropertyDescriptor
-				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
-				 getResourceLocator(),
-				 getString("_UI_State_image_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_State_image_feature", "_UI_State_type"),
-				 MetaModelPackage.Literals.STATE__IMAGE,
-				 true,
-				 false,
-				 true,
-				 null,
 				 null,
 				 null));
 	}

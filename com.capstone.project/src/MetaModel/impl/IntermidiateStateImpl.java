@@ -4,11 +4,14 @@ package MetaModel.impl;
 
 import MetaModel.IntermidiateState;
 import MetaModel.MetaModelPackage;
-
 import MetaModel.State;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
+
 import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
@@ -35,6 +38,7 @@ public class IntermidiateStateImpl extends StateImpl implements IntermidiateStat
 	 * @ordered
 	 */
 	protected EList<State> next;
+
 	/**
 	 * The cached value of the '{@link #getPrev() <em>Prev</em>}' reference list.
 	 * <!-- begin-user-doc -->

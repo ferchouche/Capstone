@@ -49,15 +49,6 @@ public interface MetaModelFactory extends EFactory {
 	Operation createOperation();
 
 	/**
-	 * Returns a new object of class '<em>State</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>State</em>'.
-	 * @generated
-	 */
-	State createState();
-
-	/**
 	 * Returns a new object of class '<em>Initial State</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -83,15 +74,6 @@ public interface MetaModelFactory extends EFactory {
 	 * @generated
 	 */
 	FinalState createFinalState();
-
-	/**
-	 * Returns a new object of class '<em>File</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>File</em>'.
-	 * @generated
-	 */
-	File createFile();
 
 	/**
 	 * Returns the package supported by this factory.

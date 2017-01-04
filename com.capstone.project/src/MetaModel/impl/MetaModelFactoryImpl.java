@@ -59,11 +59,9 @@ public class MetaModelFactoryImpl extends EFactoryImpl implements MetaModelFacto
 			case MetaModelPackage.EVOLUTION_STYLE: return createEvolutionStyle();
 			case MetaModelPackage.TRANSITION: return createTransition();
 			case MetaModelPackage.OPERATION: return createOperation();
-			case MetaModelPackage.STATE: return createState();
 			case MetaModelPackage.INITIAL_STATE: return createInitialState();
 			case MetaModelPackage.INTERMIDIATE_STATE: return createIntermidiateState();
 			case MetaModelPackage.FINAL_STATE: return createFinalState();
-			case MetaModelPackage.FILE: return createFile();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -104,16 +102,6 @@ public class MetaModelFactoryImpl extends EFactoryImpl implements MetaModelFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public State createState() {
-		StateImpl state = new StateImpl();
-		return state;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public InitialState createInitialState() {
 		InitialStateImpl initialState = new InitialStateImpl();
 		return initialState;
@@ -137,16 +125,6 @@ public class MetaModelFactoryImpl extends EFactoryImpl implements MetaModelFacto
 	public FinalState createFinalState() {
 		FinalStateImpl finalState = new FinalStateImpl();
 		return finalState;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public File createFile() {
-		FileImpl file = new FileImpl();
-		return file;
 	}
 
 	/**

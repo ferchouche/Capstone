@@ -96,10 +96,6 @@ public class MetaModelAdapterFactory extends AdapterFactoryImpl {
 				return createFinalStateAdapter();
 			}
 			@Override
-			public Adapter caseFile(File object) {
-				return createFileAdapter();
-			}
-			@Override
 			public Adapter defaultCase(EObject object) {
 				return createEObjectAdapter();
 			}
@@ -214,20 +210,6 @@ public class MetaModelAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFinalStateAdapter() {
-		return null;
-	}
-
-	/**
-	 * Creates a new adapter for an object of class '{@link MetaModel.File <em>File</em>}'.
-	 * <!-- begin-user-doc -->
-	 * This default implementation returns null so that we can easily ignore cases;
-	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
-	 * <!-- end-user-doc -->
-	 * @return the new adapter.
-	 * @see MetaModel.File
-	 * @generated
-	 */
-	public Adapter createFileAdapter() {
 		return null;
 	}
 

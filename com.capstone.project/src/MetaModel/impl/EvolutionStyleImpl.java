@@ -8,15 +8,20 @@ import MetaModel.InitialState;
 import MetaModel.IntermidiateState;
 import MetaModel.MetaModelPackage;
 import MetaModel.Transition;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -29,10 +34,10 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * </p>
  * <ul>
  *   <li>{@link MetaModel.impl.EvolutionStyleImpl#getName <em>Name</em>}</li>
- *   <li>{@link MetaModel.impl.EvolutionStyleImpl#getFinalArchitecture <em>Final Architecture</em>}</li>
  *   <li>{@link MetaModel.impl.EvolutionStyleImpl#getTransitions <em>Transitions</em>}</li>
  *   <li>{@link MetaModel.impl.EvolutionStyleImpl#getInitialArchitecture <em>Initial Architecture</em>}</li>
  *   <li>{@link MetaModel.impl.EvolutionStyleImpl#getStates <em>States</em>}</li>
+ *   <li>{@link MetaModel.impl.EvolutionStyleImpl#getFinalArchitecture <em>Final Architecture</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,16 +62,6 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
-
-	/**
-	 * The cached value of the '{@link #getFinalArchitecture() <em>Final Architecture</em>}' reference.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getFinalArchitecture()
-	 * @generated
-	 * @ordered
-	 */
-	protected FinalState finalArchitecture;
 
 	/**
 	 * The cached value of the '{@link #getTransitions() <em>Transitions</em>}' containment reference list.
@@ -97,6 +92,16 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 	 * @ordered
 	 */
 	protected EList<IntermidiateState> states;
+
+	/**
+	 * The cached value of the '{@link #getFinalArchitecture() <em>Final Architecture</em>}' containment reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFinalArchitecture()
+	 * @generated
+	 * @ordered
+	 */
+	protected FinalState finalArchitecture;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -136,44 +141,6 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.EVOLUTION_STYLE__NAME, oldName, name));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FinalState getFinalArchitecture() {
-		if (finalArchitecture != null && finalArchitecture.eIsProxy()) {
-			InternalEObject oldFinalArchitecture = (InternalEObject)finalArchitecture;
-			finalArchitecture = (FinalState)eResolveProxy(oldFinalArchitecture);
-			if (finalArchitecture != oldFinalArchitecture) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, oldFinalArchitecture, finalArchitecture));
-			}
-		}
-		return finalArchitecture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public FinalState basicGetFinalArchitecture() {
-		return finalArchitecture;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setFinalArchitecture(FinalState newFinalArchitecture) {
-		FinalState oldFinalArchitecture = finalArchitecture;
-		finalArchitecture = newFinalArchitecture;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, oldFinalArchitecture, finalArchitecture));
 	}
 
 	/**
@@ -248,6 +215,49 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public FinalState getFinalArchitecture() {
+		return finalArchitecture;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetFinalArchitecture(FinalState newFinalArchitecture, NotificationChain msgs) {
+		FinalState oldFinalArchitecture = finalArchitecture;
+		finalArchitecture = newFinalArchitecture;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, oldFinalArchitecture, newFinalArchitecture);
+			if (msgs == null) msgs = notification; else msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFinalArchitecture(FinalState newFinalArchitecture) {
+		if (newFinalArchitecture != finalArchitecture) {
+			NotificationChain msgs = null;
+			if (finalArchitecture != null)
+				msgs = ((InternalEObject)finalArchitecture).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, null, msgs);
+			if (newFinalArchitecture != null)
+				msgs = ((InternalEObject)newFinalArchitecture).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, null, msgs);
+			msgs = basicSetFinalArchitecture(newFinalArchitecture, msgs);
+			if (msgs != null) msgs.dispatch();
+		}
+		else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE, newFinalArchitecture, newFinalArchitecture));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -257,6 +267,8 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 				return basicSetInitialArchitecture(null, msgs);
 			case MetaModelPackage.EVOLUTION_STYLE__STATES:
 				return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
+			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
+				return basicSetFinalArchitecture(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -271,15 +283,14 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MetaModelPackage.EVOLUTION_STYLE__NAME:
 				return getName();
-			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
-				if (resolve) return getFinalArchitecture();
-				return basicGetFinalArchitecture();
 			case MetaModelPackage.EVOLUTION_STYLE__TRANSITIONS:
 				return getTransitions();
 			case MetaModelPackage.EVOLUTION_STYLE__INITIAL_ARCHITECTURE:
 				return getInitialArchitecture();
 			case MetaModelPackage.EVOLUTION_STYLE__STATES:
 				return getStates();
+			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
+				return getFinalArchitecture();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -296,9 +307,6 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 			case MetaModelPackage.EVOLUTION_STYLE__NAME:
 				setName((String)newValue);
 				return;
-			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
-				setFinalArchitecture((FinalState)newValue);
-				return;
 			case MetaModelPackage.EVOLUTION_STYLE__TRANSITIONS:
 				getTransitions().clear();
 				getTransitions().addAll((Collection<? extends Transition>)newValue);
@@ -309,6 +317,9 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 			case MetaModelPackage.EVOLUTION_STYLE__STATES:
 				getStates().clear();
 				getStates().addAll((Collection<? extends IntermidiateState>)newValue);
+				return;
+			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
+				setFinalArchitecture((FinalState)newValue);
 				return;
 		}
 		super.eSet(featureID, newValue);
@@ -325,9 +336,6 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 			case MetaModelPackage.EVOLUTION_STYLE__NAME:
 				setName(NAME_EDEFAULT);
 				return;
-			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
-				setFinalArchitecture((FinalState)null);
-				return;
 			case MetaModelPackage.EVOLUTION_STYLE__TRANSITIONS:
 				getTransitions().clear();
 				return;
@@ -336,6 +344,9 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 				return;
 			case MetaModelPackage.EVOLUTION_STYLE__STATES:
 				getStates().clear();
+				return;
+			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
+				setFinalArchitecture((FinalState)null);
 				return;
 		}
 		super.eUnset(featureID);
@@ -351,14 +362,14 @@ public class EvolutionStyleImpl extends MinimalEObjectImpl.Container implements 
 		switch (featureID) {
 			case MetaModelPackage.EVOLUTION_STYLE__NAME:
 				return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
-				return finalArchitecture != null;
 			case MetaModelPackage.EVOLUTION_STYLE__TRANSITIONS:
 				return transitions != null && !transitions.isEmpty();
 			case MetaModelPackage.EVOLUTION_STYLE__INITIAL_ARCHITECTURE:
 				return initialArchitecture != null;
 			case MetaModelPackage.EVOLUTION_STYLE__STATES:
 				return states != null && !states.isEmpty();
+			case MetaModelPackage.EVOLUTION_STYLE__FINAL_ARCHITECTURE:
+				return finalArchitecture != null;
 		}
 		return super.eIsSet(featureID);
 	}

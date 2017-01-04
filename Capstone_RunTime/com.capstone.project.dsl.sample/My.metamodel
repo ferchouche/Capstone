@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.projet.sirius:EvolutionStyle xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.projet.sirius="com.projet.sirius">
+  <transitions name="Premier" source="//@InitialArchitecture" target="//@states.0">
+    <operations name="Premiere" cost="5.0" time="36.0"/>
+  </transitions>
+  <transitions name="Deuxieme" description="" source="//@states.0" target="//@finalArchitecture">
+    <operations name="Deuxieme" cost="2.0" time="10.0"/>
+  </transitions>
+  <InitialArchitecture name="Nantes" next="//@states.0"/>
+  <states name="Tours" next="//@finalArchitecture" prev="//@InitialArchitecture"/>
+  <finalArchitecture name="Paris"/>
+</com.projet.sirius:EvolutionStyle>
